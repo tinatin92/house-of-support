@@ -1,4 +1,18 @@
+/* document.addEventListener("DOMContentLoaded", function () {
+  // Smooth scrolling for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+              behavior: 'smooth'
+          });
+      });
+  });
+}); */
 $(document).ready(function () {
+
+
   $(".mainpage_postslider").slick({
     arrows: false,
     slidesToShow: 1,
@@ -11,6 +25,13 @@ $(document).ready(function () {
     slidesToScroll: 1,
     arrows: true,
     appendArrows: $('.partners-slider__arrows'),
+  });
+
+  $('.photo-gallery-slider').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    arrows: true,
+    appendArrows: $('.photo-gallery__arrows')
   })
 
   $(window).scroll(function () {
@@ -76,8 +97,8 @@ $(document).ready(function () {
       $(this).parent().toggleClass("rotate");
   });
 
-  Fancybox.bind('[data-fancybox="video"]', {
-   
-  });
+  Fancybox.bind('[data-fancybox="video"]', {});
+  Fancybox.bind('[data-fancybox="text-page__images"]', {});
+  Fancybox.bind('[data-fancybox="photo-gallery_images"]', {});
 
 });
