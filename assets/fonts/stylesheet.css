@@ -1,0 +1,180 @@
+@font-face {
+    font-family: 'Bebas Neue';
+    src: url('BebasNeue-Regular.woff2') format('woff2'),
+        url('BebasNeue-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bebas Neue';
+    src: url('BebasNeue-Bold.woff2') format('woff2'),
+        url('BebasNeue-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bebas Neue Book';
+    src: url('BebasNeue-Book.woff2') format('woff2'),
+        url('BebasNeue-Book.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bebas Neue';
+    src: url('BebasNeue-Light.woff2') format('woff2'),
+        url('BebasNeue-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bebas Neue';
+    src: url('BebasNeue-Bold.woff2') format('woff2'),
+        url('BebasNeue-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bebas Neue Book';
+    src: url('BebasNeue-Book.woff2') format('woff2'),
+        url('BebasNeue-Book.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bebas Neue';
+    src: url('BebasNeue-Regular.woff2') format('woff2'),
+        url('BebasNeue-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bebas Neue';
+    src: url('BebasNeue-Light.woff2') format('woff2'),
+        url('BebasNeue-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'LGV Bebas Neue';
+    src: url('LGVBebasNeue-Regular.woff2') format('woff2'),
+        url('LGVBebasNeue-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bebas Neue';
+    src: url('BebasNeue-Thin.woff2') format('woff2'),
+        url('BebasNeue-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'TBC Contractica';
+    src: url('TBCContractica-Regular.woff2') format('woff2'),
+        url('TBCContractica-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'TBC Contractica CAPS';
+    src: url('TBCContracticaCAPS-Light.woff2') format('woff2'),
+        url('TBCContracticaCAPS-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'TBC Contractica CAPS';
+    src: url('TBCContracticaCAPS-Regular.woff2') format('woff2'),
+        url('TBCContracticaCAPS-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'TBC Contractica';
+    src: url('TBCContractica-Bold.woff2') format('woff2'),
+        url('TBCContractica-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'LGV Bebas Neue Book';
+    src: url('LGVBebasNeueBook.woff2') format('woff2'),
+        url('LGVBebasNeueBook.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'TBC Contractica CAPS';
+    src: url('TBCContracticaCAPS-Medium.woff2') format('woff2'),
+        url('TBCContracticaCAPS-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'TBC Contractica CAPS';
+    src: url('TBCContracticaCAPS-Bold.woff2') format('woff2'),
+        url('TBCContracticaCAPS-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'TBC Contractica';
+    src: url('TBCContractica-Medium.woff2') format('woff2'),
+        url('TBCContractica-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bebas Neue';
+    src: url('BebasNeue-Thin.woff2') format('woff2'),
+        url('BebasNeue-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'TBC Contractica';
+    src: url('TBCContractica-Light.woff2') format('woff2'),
+        url('TBCContractica-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
