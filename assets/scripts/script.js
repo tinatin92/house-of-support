@@ -32,6 +32,12 @@ $(document).ready(function () {
     slidesToScroll: 1,
     arrows: true,
     appendArrows: $('.photo-gallery__arrows')
+  });
+
+  $('.team-slider').slick({
+    slidesToShow:3,
+    slidesToScroll:1,
+    appendArrows: $('.team-slider__arrows')
   })
 
   $(window).scroll(function () {
@@ -96,9 +102,13 @@ $(document).ready(function () {
     $(this).parent().toggleClass("burgeropen"),
       $(this).parent().toggleClass("rotate");
   });
-
+  Fancybox.bind('[data-fancybox]', {});
   Fancybox.bind('[data-fancybox="video"]', {});
   Fancybox.bind('[data-fancybox="text-page__images"]', {});
   Fancybox.bind('[data-fancybox="photo-gallery_images"]', {});
+
+  $('.faq-box').click(function(){
+     $(this).toggleClass('active')
+  })
 
 });
