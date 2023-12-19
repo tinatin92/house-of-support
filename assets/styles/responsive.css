@@ -190,6 +190,28 @@
 .margintb-70 {
     margin: 50px auto 60px auto;
 }
+.publication-box{
+    height: 460px;
+}
+.donation-banner h3{
+    font-size: 44px;
+}
+.donation-banner{
+    padding: 54px 281px 61px 250px;
+}
+.donation-field button{
+    font-size: 24px;
+}
+.contact .mzeqala-font{
+    font-size: 28px;
+    margin-bottom: 35px;
+}
+.search-result .orange{
+    margin: 15px 0 20px 0;
+}
+.search-result{
+    padding: 36px 0;
+}
 }
 @media (max-width: 1400px) {
 }
