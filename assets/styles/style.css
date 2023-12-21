@@ -9,6 +9,7 @@ body {
   box-sizing: border-box;
   font-size: 20px;
   line-height: 36px;
+  line-height: 36px;
   font-family: 'TBC Contractica';
   scroll-behavior: smooth;
   overflow-x: hidden;
@@ -93,6 +94,7 @@ img{
   font-size: 18px;
   font-weight: bold;
   transition-duration: .3s;
+  cursor: pointer;
 }
 .news-all:hover{
   color: var(--orange);
@@ -474,6 +476,18 @@ a {
     max-width: 1560px;
   }
 }
+::-webkit-scrollbar {
+  width: 8px;
+  border-radius: 0 6px 6px 0;
+  overflow: hidden;
+}
+::-webkit-scrollbar-track {
+  background: #fff; 
+}
+::-webkit-scrollbar-thumb {
+  background: var(--blue); 
+  border-radius: 6px;
+}
 .slick-track {
   display: flex;
 }
@@ -818,7 +832,8 @@ header.header-scroll .menu .main-manu .menu-link  {
   margin-bottom: 150px;
 }
 .main-banner__img {
-  width: 100vw;
+ 
+  width: 100%;
   height: 100vh;
   overflow: hidden;
 }
@@ -890,6 +905,8 @@ header.header-scroll .menu .main-manu .menu-link  {
   font-size: 22px;
   line-height: 30px;
   color: var(--white);
+  height: 22px;
+  overflow: hidden;
  margin: 14px 0 10px 110px;
 }
 .thirdcard-banner__two {
@@ -995,7 +1012,7 @@ header.header-scroll .menu .main-manu .menu-link  {
 .services-card {
   position: relative;
   border-radius: 10px;
-  padding: 40px 0 35px 0;
+  padding: 40px 12px 35px 12px;
   text-align: center;
   position: relative;
   font-family: 'BPG Nino Mtavruli';
@@ -1380,9 +1397,7 @@ header.header-scroll .menu .main-manu .menu-link  {
   background-color: var(--gray);
   overflow: hidden;
 }
-.partners-component h2{
-  margin-bottom: 60px;
-}
+
 .partner-com__img img{
   width: 100%;
   height: 100%;
@@ -1429,6 +1444,7 @@ header.header-scroll .menu .main-manu .menu-link  {
 }
 
 .video-box{
+  width: 48%;
   position: relative;
   height: 350px;
   border-radius: 10px;
@@ -1451,7 +1467,7 @@ header.header-scroll .menu .main-manu .menu-link  {
   object-fit: cover;
 }
 .organizations__text{
- margin: 20px 0 40px 0;
+ margin: 0px 0 40px 0;
 }
 .organization-image__slider{
   margin-top: 40px;
@@ -1635,7 +1651,7 @@ align-items: center;
 }
 .bullet {
   padding: 0 0 0 30px;
-  margin: 50px 0;
+  margin: 0 0 50px 0;
 
 }
 .bullets ul li::marker {
@@ -1875,6 +1891,8 @@ align-items: center;
   border: none;
   border-radius: 6px;
   max-width: 615px;
+  max-height: 700px;
+  overflow-y: scroll;
   background-color: #fff;
   z-index: 2000;
 }
@@ -1906,21 +1924,12 @@ align-items: center;
   object-fit: cover;
   margin: 0 25px 0 0;
 }
-.modal-links a{
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
+.modal-links img{
   width: 46px;
   height: 46px;
-  background-color: var(--blue);
-  border-radius: 50%;
-  color: #fff;
-  font-size: 24px;
-  margin: 0 18px 0 0;
-  transition-duration: .3s;
-}
-.modal-links a:hover{
-  background-color: var(--orange);
+  object-fit: contain;
+  margin-right: 20px;
 }
 .modal-text{
   margin: 20px 0 30px 0;
@@ -2365,4 +2374,104 @@ margin-bottom: 20px;
 #donation-button.open:hover{
   color: #fff;
   border: 1px solid #fee26d;
+}
+.blue-heart__banner .title-36{
+  margin-bottom: 100px;
+}
+.burger-menuicon{
+  
+  padding:10px;
+  border-radius: 3px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  cursor: pointer;
+}
+.burger-menuicon span{
+  display: block;
+  width: 22px;
+  height: 3px;
+  border-radius: 3px;
+  background-color: var(--blue);
+  margin: 4px 0;
+}
+.burger-menuicon span:last-of-type{
+  width: 16px;
+  margin-left: auto;
+}
+.burger-logo{
+ 
+  width: 65px;
+  height: 65px;
+  object-fit: contain;
+}
+.burger-menu{
+  display: none;
+ position: fixed;
+ top: 0;
+  right: 0;
+  width: 700px;
+  height: initial;
+  padding: 40px 15px;
+  background-color: #fff;
+}
+.burger-menu.open{
+  display: block;
+}
+.burger-nav{
+  list-style: none;
+  padding: 10px 0 40px 0;
+}
+.burger-nav__button{
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  overflow: hidden;
+  
+}
+.burger-link{
+  font-size: 16px;
+  font-weight: 700;
+  font-family: "BPG Nino Mtavruli";
+}
+.menu-button{
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.burger-row{
+  padding: 24px 12px 24px 0;
+  border-bottom: 2px solid var(--gray);
+}
+.burger-menu__last{
+  margin-top: 30px;
+}
+.burger-menu-lang{
+  font-size: 18px;
+  color: #000;
+  font-weight: 700;
+}
+.burger-menu__last .button{
+  padding: 20px 44px 18px 44px !important;
+}
+.burgmenu-sub li{
+  list-style: none !important;
+}
+.burgmenu-sub {
+  display: none;
+  
+  font-size: 16px;
+  font-weight: 700;
+  font-family: "BPG Nino Mtavruli";
+}
+.burgmenu-sub div{
+   padding: 10px;
+   text-align: center;
+}
+.burger-open.open .burgmenu-sub{
+  display: block;
+}
+.burger-menuicon{
+  display: none;
 }

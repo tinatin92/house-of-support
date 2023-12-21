@@ -46,7 +46,7 @@ $(document).ready(function () {
     arrows: false,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true,
+   /*  autoplay: true, */
   });
 
   $(".organization-image__slider").slick({
@@ -54,6 +54,15 @@ $(document).ready(function () {
     slidesToScroll: 1,
     arrows: true,
     appendArrows: $(".partners-slider__arrows"),
+    responsive: [
+      {
+        breakpoint: 993,
+        settings:{
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        }
+      }
+    ]
   });
 
   $(".photo-gallery-slider").slick({
@@ -61,12 +70,30 @@ $(document).ready(function () {
     slidesToScroll: 1,
     arrows: true,
     appendArrows: $(".photo-gallery__arrows"),
+    responsive: [
+      {
+        breakpoint: 768,
+        settings:{
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        }
+      }
+    ]
   });
 
   $(".team-slider").slick({
     slidesToShow: 3,
     slidesToScroll: 1,
     appendArrows: $(".team-slider__arrows"),
+    responsive: [
+      {
+        breakpoint: 993,
+        settings:{
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        }
+      }
+    ]
   });
 
   $(window).scroll(function () {
@@ -174,7 +201,17 @@ $(document).ready(function () {
     window.location.reload();
   });
 
+  $('.burger-menuicon').click(function(){
+    $('.burger-menu').addClass('open')
+  });
 
+  $('.menu-button').click(function(){
+    $('.burger-menu').removeClass('open')
+  })
+
+$('.burger-nav__button').click(function(){
+  $(this).closest('.burger-open').toggleClass('open')
+})
  
 });
 
