@@ -21,6 +21,7 @@
     height: 56px;
     top: -48px;
   }
+  
   .thirdcard-banner__one span {
     font-size: 20px;
     margin: 14px 0 10px 88px;
@@ -46,7 +47,7 @@
   }
   .services-card {
     font-size: 22px;
-    padding: 32px 10px 28px 10px;
+   height: 120px;
     margin-bottom: 25px;
   }
   .gap-30 {
@@ -325,7 +326,8 @@
 
   .services-card {
     font-size: 18px;
-    padding: 28px 8px 24px 8px;
+    height: 110px;
+   padding: 8px;
     margin-bottom: 20px;
   }
   .achievements-circle {
@@ -721,6 +723,9 @@
   }
 }
 @media (max-width: 1200px) {
+  .table1{
+    padding: 0 30px 0 0;
+  }
   .team-values-1 h2 {
     width: 80%;
   }
@@ -769,8 +774,23 @@
     font-size: 16px;
     line-height: 24px;
   }
+  #white-gen-0100{
+    font-size: 18px !important;
+  }
+  #green-gen-0100{
+    font-size: 18px !important;
+  }
+  #yelllow-gen-0100{
+    font-size: 18px !important;
+  }
+
   .component-scroll{
     display: none;
+  }
+  .partner-com_text div{
+    font-size: 14px;
+    line-height: 24px;
+    height: 72px;
   }
   .main-banner,
   .main-banner__img {
@@ -778,6 +798,9 @@
   }
   .main-banner {
     margin-bottom: 50px;
+  }
+  .text-and-button__text{
+    height: 70px;
   }
   .title-60 {
     font-size: 20px;
@@ -894,7 +917,10 @@
   .services-title {
     margin: 0px auto 30px auto;
   }
+ 
   .news-component-2 div {
+    font-size: 14px;
+    line-height: 24px;
     padding: 0px 20px 0 0;
   }
   .subscribe-border::before {
@@ -1005,13 +1031,17 @@
   }
   .publication-detail.row {
     flex-wrap: wrap;
+  justify-content: center;
   }
   .pub-detail-img {
-    width: 100%;
+    width: 60%;
     margin-bottom: 30px;
-    padding: 80px 150px;
+    justify-self: center;
+    padding: 40px 90px;
   }
   .pub-detail-text {
+  
+    width: 100%;
     margin-bottom: 30px;
   }
   .publication-list h1 {
@@ -1053,7 +1083,7 @@
     font-size: 32px;
   }
   .donation-banner {
-    padding: 50px 30px;
+    padding: 50px 65px;
   }
   .donation-banner h3 {
     font-size: 28px;
@@ -1080,6 +1110,10 @@
 }
 }
 @media (max-width: 768px) {
+  body{
+    font-size: 16px;
+    line-height: 28px;
+  }
   header.header-scroll .header-logo,
   .header-logo {
     width: 55px;
@@ -1206,8 +1240,9 @@
     justify-content: center;
   }
   .footer-second {
-    padding: 20px 0;
+    padding: 20px 0px;
   }
+
   .footer-second span {
     margin-bottom: 10px;
   }
@@ -1258,7 +1293,7 @@
     margin: 0 14px 0 0;
   }
   .bullets {
-    padding: 1px 0 0 60px;
+    padding: 1px 0 0 10px;
   }
   .bullet {
     padding: 0 0 0 10px;
@@ -1355,7 +1390,10 @@
     margin-top: 20px;
 }
 .partner-com_text div {
-    height: 168px;
+    height: 140px;
+}
+.bullets ul{
+  list-style: none;
 }
 .partner-com__box{
     border: none;
@@ -1367,7 +1405,7 @@
     padding: 0;
 }
 .text-and-button__text {
-    height: 120px;
+    height: 116px;
 }
 .text-and-button .button {
    font-size: 14px;
@@ -1401,7 +1439,7 @@
     font-size: 20px;
 }
 .pub-detail-img {
-  
+  height: 350px;
     padding: 40px 60px;
 }
 .pub-detail-text{
@@ -1424,11 +1462,18 @@
     width: 100%;
 }
 .team-values__text{
-    padding: 0;
+    padding: 20px 0 0 0;
+    height: 322px;
+}
+.services-card{
+  height: 100px;
 }
 .services-card .servise-heartimage{
-    top: -70%;
+  
+    width: 80px;
+    height: 44px;
 }
+
 .organization-table li div.row {
     flex-wrap: wrap;
 }
@@ -1485,18 +1530,18 @@
 }
 .donation-banner{
     width: 100%;
-    padding: 40px 16px;
+    padding: 40px 36px;
     background-image: url('../images/Mask\ group\ \(1\).svg')
 }
 .organization-table-row .row{
     flex-wrap: wrap;
 }
 .donors  .table1{
-    height: 50px;
+    height: 55px;
     margin-bottom: 20px;
 }
 .donors  .table2{
-    height: 73px;
+    height: 84px;
     margin-bottom: 20px;
 }
 #donationForm .row{
@@ -1561,6 +1606,9 @@
 }
 }
 @media (max-width: 576px) {
+  .pub-detail-img {
+    width: 90%;
+  }
 }
 @media (max-width: 440px) {
 }

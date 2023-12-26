@@ -1012,8 +1012,13 @@ header.header-scroll .menu .main-manu .menu-link  {
 .services-card {
   position: relative;
   border-radius: 10px;
-  padding: 40px 12px 35px 12px;
+  height: 130px;
   text-align: center;
+  
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
   font-family: 'BPG Nino Mtavruli';
   font-weight: 700;
@@ -1469,6 +1474,9 @@ header.header-scroll .menu .main-manu .menu-link  {
 .organizations__text{
  margin: 0px 0 40px 0;
 }
+.organizations .margin-b-60 {
+  margin-bottom: 30px;
+}
 .organization-image__slider{
   margin-top: 40px;
 }
@@ -1757,12 +1765,11 @@ align-items: center;
   padding: 0px 0 0px 25px;
   border-left: 3px solid var(--orange);
   height: 0px;
-  
   overflow: hidden;
   transition-duration: .3s;
 }
 .faq-box.active .faq-answer{
- height: initial;
+  height: initial;
   margin: 30px 0 40px 105px;
   transition-duration: .3s;
 }
@@ -1982,10 +1989,11 @@ border-radius: 6px;
   color: #fff;
   font-size: 74px;
 }
-.organization-table{
+.organization-table,
+.donors {
   font-size: 18px;
   line-height: 30px;
- 
+
 }
 .organization-table-row ol {
   list-style-type: none;
@@ -2019,6 +2027,7 @@ border-radius: 6px;
 
 .table1{
   width: 33%;
+  padding: 0 50px 0 0;
   height: 64px;
   overflow: hidden;
 }
@@ -2138,7 +2147,7 @@ border-radius: 6px;
    border-radius: 8px;
 }
 .pub-detail-text{
-  flex: 1;
+ width: 70%;
   padding: 0 0 0px 30px;
 }
 .pub-detail-text a{
