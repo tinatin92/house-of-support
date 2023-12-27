@@ -192,25 +192,28 @@
             <h2 tabindex="30"  class="title-36">დაგვიკავშირდით</h2>
             <div class="mzeqala-font">ჩვენ ვიზრუნებთ თქვენ ბედნიერ დაბერებაზე!</div>
             <div class="contact-inputs">
-                <form action="">
+                <form id="contactform" action="">
                     <div>
                         <label tabindex="30"  class="star" for="contactname">სახელი, გვარი</label>
                         <input id="contactname" type="text">
+                        <div class="warning">გთხოვთ შეავსოთ ველი</div>
                     </div>
                     <div>
                         <label tabindex="30"  class="star" for="contactmail">ელ-ფოსტა*</label>
-                        <input id="contactmail" type="text">
+                        <input id="contactmail" type="email">
                     </div>
                     <div>
                         <label tabindex="30"  class="" for="contactsubject">თემა</label>
                         <input id="contactsubject" type="text">
+                        <div class="warning">გთხოვთ შეავსოთ ველი</div>
                     </div>
                     <div>
                         <label tabindex="30"  class="star" for="contactmessage">შეტყობინება</label>
                         <textarea name="contactmessage" id="contactmessage"></textarea>
+                        <div class="warning">გთხოვთ შეავსოთ ველი</div>
                     </div>
                     <div>
-                        <button tabindex="30"  class="button button-blue">გაგზავნა</button>
+                        <button id="contactbutton" tabindex="30"  class="button button-blue">გაგზავნა</button>
                     </div>
                 </form>
             </div>

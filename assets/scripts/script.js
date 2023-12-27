@@ -158,11 +158,18 @@ $(document).ready(function () {
       });
     });
   });
-  $("#donation-button").click(function (e) {
+/*    $("#donation-button").click(function (e) {
      e.preventDefault();
      var donationButton = $(this);
-    $(".donation-invisiable").toggleClass("open");
-    donationButton.toggleClass('open');
+    $(".donation-invisiable").addClass("open");
+
+    if (donationButton.hasClass('opened')) {
+      // This is the second click
+      $(".donation-input input").addClass('red');
+    }else{
+    donationButton.addClass('opened');
+    }
+ 
 
     if ($(".donation-input input[type='text']").val() !== "" &&
             $(".donation-input input[type='email']").val() !== "" &&
@@ -173,10 +180,63 @@ $(document).ready(function () {
             donationButton.addClass('yellow')
 
              $("#donationForm").submit();
-        } 
+        } else {
+          $(".donation-input input").addClass('red')
+        }
 
         
-  });
+  });  */
+
+  $("#donation-button").click(function (e) {
+    e.preventDefault();
+    var donationButton = $(this);
+
+    // Check if the donation button has the 'opened' class
+    if (donationButton.hasClass('opened')) {
+        // This is the second click
+        $(".donation-input input").addClass('red');
+        $("#donation").addClass('red');
+        $('.warning').addClass('open')
+    } else {
+        // This is the first click
+        $(".donation-input input").removeClass('red');
+        $("#donation").removeClass('red');
+        $(".donation-invisiable").addClass("open");
+        donationButton.addClass('opened');
+    }
+    if ($(".donation-input input[type='text']").val() !== "" &&
+    $(".donation-input input[type='email']").val() !== "" &&
+    $("#donation").val() !== "") {
+      $(".donation-input input").removeClass('red');
+      $("#donation").removeClass('red');
+      $('.warning').removeClass('open')
+    // Perform form submission
+    donationButton.addClass('yellow');
+    $("#donationForm").submit();
+}
+});
+
+$('#contactbutton').click(function(e){
+    e.preventDefault();
+
+    if($('#contactname').val() !== "" &&
+    $('#contactmail').val() !== "" &&
+    $('#contactmessage').val() !== "") {
+      $('.warning').removeClass('open');
+      $('#contactname').removeClass('red');
+      $('#contactmail').removeClass('red');
+      $('#contactmessage').removeClass('red');
+
+      $("#contactform").submit();
+     
+    }else{
+      $('.warning').addClass('open');
+      $('#contactname').addClass('red');
+      $('#contactmail').addClass('red');
+      $('#contactmessage').addClass('red');
+    }
+})
+
 
   $(".burgerarrov").click(function () {
     $(this).parent().toggleClass("burgeropen"),

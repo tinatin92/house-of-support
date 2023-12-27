@@ -2233,6 +2233,10 @@ border-radius: 6px;
   border: none;
   border-radius: 6px;
 }
+.donation-input input.red{
+  border: 2px solid #FF0000;
+  background-color: #fff0f0;
+}
 .donation-input input:focus,
 .donation-text textarea:focus{
   outline: none;
@@ -2243,6 +2247,19 @@ border-radius: 6px;
 .donation-text{
   width: 60%;
 
+}
+.warning{
+  font-size: 16px;
+  color: #FF0000;
+  margin-top: 6px;
+  display: none;
+}
+.warning.open{
+  display: block;
+}
+.donation-text textarea.red{
+  border: 2px solid #FF0000;
+  background-color: #fff0f0;
 }
 .donation-text textarea{
   width: 100%;
@@ -2483,4 +2500,13 @@ margin-bottom: 20px;
 }
 .burger-menuicon{
   display: none;
+}
+#contactname.red,
+#contactmail.red,
+#contactmessage.red{
+  border: 1px solid #FF0000;
+  background-color: #fff0f0;
+}
+.contact-inputs .warning{
+  margin-top: 2px;
 }
