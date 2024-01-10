@@ -106,8 +106,10 @@ $(document).ready(function () {
   $(window).scroll(function () {
     if ($(this).scrollTop() > 1) {
       $("header").addClass("header-scroll");
+      $('.sidebar').addClass("shadow");
     } else {
       $("header").removeClass("header-scroll");
+      $('.sidebar').removeClass("shadow");
     }
 
     const $element = $("header");

@@ -190,7 +190,12 @@
   }
   .publication-box {
     height: 460px;
+    padding: 120px 0 0 0;
   }
+  .publication-content-1 img {
+    width: 160px;
+    height: 224px;}
+
   .donation-banner h3 {
     font-size: 44px;
   }
@@ -233,6 +238,14 @@
   .search input::placeholder {
     font-size: 16px;
   }
+  .publication-content-1 img {
+    width: 144px;
+    height: 201px;
+}
+.pub-detail-img img{
+  width: 216px;
+  height: 302px;
+}
   .lang {
     font-size: 18px;
   }
@@ -602,7 +615,8 @@
   }
   .publication-text {
     margin: 15px 0 20px 0;
-    height: 129px;
+    height: 125px;
+   line-height: 30px;
   }
   .publication-list .publication {
     row-gap: 45px;
@@ -745,7 +759,7 @@
     width: 400px;
   }
   .publication-box {
-    width: 22.5%;
+    width: 31.5%;
   }
   .gallery-box {
     width: 31%;
@@ -776,14 +790,25 @@
   }
   #white-gen-0100{
     font-size: 22px !important;
+    height: 30px !important;
+  }
+  #uppercase-gen-0100{
+    font-size: 22px !important; 
   }
   #green-gen-0100{
     font-size: 22px !important;
+    height: 30px !important;
   }
   #yelllow-gen-0100{
     font-size: 22px !important;
+    height: 30px !important;
   }
-
+  #gen-conponents-0100{
+    justify-content: space-between;
+  }
+  .table2, .table1{
+    font-size: 14px;
+  }
   .component-scroll{
     display: none;
   }
@@ -865,7 +890,7 @@
     font-size: 14px;
     height: 86px;
 
-    line-height: 30px;
+    line-height: 28px;
   }
   .thirdcard-banner__hidden-text a {
     font-size: 14px;
@@ -996,6 +1021,7 @@
   }
   .bullets.width-50 {
     width: 100%;
+    padding: 0 12px;
   }
   .heart-bullet__image {
     padding: 30px 16px 0px 16px;
@@ -1108,6 +1134,10 @@
 .pub-detail-text{
     padding: 0;
 }
+#gen-conponents-0100{
+  min-height: 150px;
+  
+}
 }
 @media (max-width: 768px) {
   body{
@@ -1123,11 +1153,18 @@
   .main-banner__img {
     height: 280px;
   }
+  .bullet-text{
+    line-height: 28px;
+  }
   .title-60 {
     font-size: 16px;
   }
   .button {
     font-size: 14px;
+  }
+  .pub-detail-img img{
+    width: 170px;
+    height: 248px;
   }
   .main-banner__text a {
     margin-top: 12px;
@@ -1429,14 +1466,20 @@
 .publication-box{
     width: 100%;
     height: 500px;
-    padding: 150px 80px 53px 80px;
+    padding: 150px 0 0 0;
+}
+.publication-content-1 img{
+  width: 193px;
+  height: 267px;
+
 }
 .publication-content-2 h3{
     font-size: 20px;
 }
 .publication-text{
     height: 183px;
-    font-size: 20px;
+    font-size: 16px;
+    line-height: 28px;
 }
 .pub-detail-img {
   height: 350px;
@@ -1604,6 +1647,7 @@
     height: 38px;
     margin-right: 15px;
 }
+
 }
 @media (max-width: 576px) {
   .pub-detail-img {
