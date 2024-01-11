@@ -2256,15 +2256,19 @@ border-radius: 6px;
   width: 60%;
 
 }
+
 .warning{
   font-size: 16px;
   color: #FF0000;
   margin-top: 6px;
   display: none;
 }
-.warning.open{
+
+.parent.parentClass .warning.open{
   display: block;
 }
+
+
 .donation-text textarea.red{
   border: 2px solid #FF0000;
   background-color: #faf2f2;

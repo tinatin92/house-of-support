@@ -1,18 +1,18 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Smooth scrolling for anchor links
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener("click", function (e) {
       e.preventDefault();
 
-      const targetElement = document.querySelector(this.getAttribute('href'));
-      
+      const targetElement = document.querySelector(this.getAttribute("href"));
+
       // Calculate the scroll position, considering the target 100px higher
       const scrollPosition = targetElement.offsetTop - 150;
 
       // Scroll into view with the updated position
       window.scrollTo({
         top: scrollPosition,
-        behavior: 'smooth'
+        behavior: "smooth",
       });
     });
   });
@@ -28,25 +28,17 @@ $(document).ready(function () {
 
     const slide = $(event.target).parents(".slick-slide");
 
-    slide[0].scrollIntoView({ block: "center" }); 
+    slide[0].scrollIntoView({ block: "center" });
   });
-  $('.mainpage_postslider.slick-cloned *[tabindex]').each(
-
-    function(i,el)
-
-    {
-
-       $(el).prop('tabindex',-1);
-
-    }
-
-  )
+  $(".mainpage_postslider.slick-cloned *[tabindex]").each(function (i, el) {
+    $(el).prop("tabindex", -1);
+  });
 
   $(".mainpage_postslider").slick({
     arrows: false,
     slidesToShow: 1,
     slidesToScroll: 1,
-   /*  autoplay: true, */
+    /*  autoplay: true, */
   });
 
   $(".organization-image__slider").slick({
@@ -57,19 +49,19 @@ $(document).ready(function () {
     responsive: [
       {
         breakpoint: 993,
-        settings:{
+        settings: {
           slidesToShow: 3,
           slidesToScroll: 1,
-        }
+        },
       },
       {
         breakpoint: 768,
-        settings:{
+        settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
-        }
-      }
-    ]
+        },
+      },
+    ],
   });
 
   $(".photo-gallery-slider").slick({
@@ -80,12 +72,12 @@ $(document).ready(function () {
     responsive: [
       {
         breakpoint: 768,
-        settings:{
+        settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-        }
-      }
-    ]
+        },
+      },
+    ],
   });
 
   $(".team-slider").slick({
@@ -95,21 +87,21 @@ $(document).ready(function () {
     responsive: [
       {
         breakpoint: 993,
-        settings:{
+        settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
-        }
-      }
-    ]
+        },
+      },
+    ],
   });
 
   $(window).scroll(function () {
     if ($(this).scrollTop() > 1) {
       $("header").addClass("header-scroll");
-      $('.sidebar').addClass("shadow");
+      $(".sidebar").addClass("shadow");
     } else {
       $("header").removeClass("header-scroll");
-      $('.sidebar').removeClass("shadow");
+      $(".sidebar").removeClass("shadow");
     }
 
     const $element = $("header");
@@ -160,7 +152,7 @@ $(document).ready(function () {
       });
     });
   });
-/*    $("#donation-button").click(function (e) {
+  /*    $("#donation-button").click(function (e) {
      e.preventDefault();
      var donationButton = $(this);
     $(".donation-invisiable").addClass("open");
@@ -191,54 +183,80 @@ $(document).ready(function () {
 
   $("#donation-button").click(function (e) {
     e.preventDefault();
-    var donationButton = $(this);
-
+    const donationButton = $(this);
+    const nameInput = $("#input1");
+    const emailInput = $("#input2");
+    const textInput = $("#donation");
+    const warning = $(".warning");
+ 
+  
     // Check if the donation button has the 'opened' class
-    if (donationButton.hasClass('opened')) {
-        // This is the second click
-        $(".donation-input input").addClass('red');
-        $("#donation").addClass('red');
-        $('.warning').addClass('open')
+    if (donationButton.hasClass("opened")) {
+      handleInputValidation(nameInput);
+      handleInputValidation(emailInput);
+      handleInputValidation(textInput);
     } else {
-        // This is the first click
-        $(".donation-input input").removeClass('red');
-        $("#donation").removeClass('red');
-        $(".donation-invisiable").addClass("open");
-        donationButton.addClass('opened');
+      // This is the first click
+      resetFormState();
     }
-    if ($(".donation-input input[type='text']").val() !== "" &&
-    $(".donation-input input[type='email']").val() !== "" &&
-    $("#donation").val() !== "") {
-      $(".donation-input input").removeClass('red');
-      $("#donation").removeClass('red');
-      $('.warning').removeClass('open')
-    // Perform form submission
-    donationButton.addClass('yellow');
-    $("#donationForm").submit();
-}
-});
+  
+    if (nameInput.val() !== "" && emailInput.val() !== "" && textInput.val() !== "") {
+      resetFormState();
+      // Perform form submission
+      donationButton.addClass("yellow");
+      $("#donationForm").submit();
+    }
+  
+    function handleInputValidation(input) {
+      if (input.val() === "") {
+        input.addClass("red");
+        input.parent().addClass("parentClass");
+        warning.addClass("open");
+      } else {
+        input.removeClass("red");
+        // Check if the corresponding input has removed the "open" class
+        if (input.parent().hasClass("parentClass")) {
+          warning.removeClass("open");
+          donationButton.addClass("opened");
+        }
+        input.parent().removeClass("parentClass");
+      }
+    }
+  
+    function resetFormState() {
+      nameInput.removeClass("red");
+      emailInput.removeClass("red");
+      textInput.removeClass("red");
+      warning.removeClass("open");
+      $(".donation-invisiable").addClass("open");
+      donationButton.addClass("opened");
+    }
+  });
+  
+  
+  
 
-$('#contactbutton').click(function(e){
+  $("#contactbutton").click(function (e) {
     e.preventDefault();
 
-    if($('#contactname').val() !== "" &&
-    $('#contactmail').val() !== "" &&
-    $('#contactmessage').val() !== "") {
-      $('.warning').removeClass('open');
-      $('#contactname').removeClass('red');
-      $('#contactmail').removeClass('red');
-      $('#contactmessage').removeClass('red');
+    if (
+      $("#contactname").val() !== "" &&
+      $("#contactmail").val() !== "" &&
+      $("#contactmessage").val() !== ""
+    ) {
+      $(".warning").removeClass("open");
+      $("#contactname").removeClass("red");
+      $("#contactmail").removeClass("red");
+      $("#contactmessage").removeClass("red");
 
       $("#contactform").submit();
-     
-    }else{
-      $('.warning').addClass('open');
-      $('#contactname').addClass('red');
-      $('#contactmail').addClass('red');
-      $('#contactmessage').addClass('red');
+    } else {
+      $(".warning").addClass("open");
+      $("#contactname").addClass("red");
+      $("#contactmail").addClass("red");
+      $("#contactmessage").addClass("red");
     }
-})
-
+  });
 
   $(".burgerarrov").click(function () {
     $(this).parent().toggleClass("burgeropen"),
@@ -270,18 +288,17 @@ $('#contactbutton').click(function(e){
     window.location.reload();
   });
 
-  $('.burger-menuicon').click(function(){
-    $('.burger-menu').addClass('open')
+  $(".burger-menuicon").click(function () {
+    $(".burger-menu").addClass("open");
   });
 
-  $('.menu-button').click(function(){
-    $('.burger-menu').removeClass('open')
-  })
+  $(".menu-button").click(function () {
+    $(".burger-menu").removeClass("open");
+  });
 
-$('.burger-nav__button').click(function(){
-  $(this).closest('.burger-open').toggleClass('open')
-})
- 
+  $(".burger-nav__button").click(function () {
+    $(this).closest(".burger-open").toggleClass("open");
+  });
 });
 
 /* const openButton = document.querySelector('[data-open-modal]');
@@ -318,8 +335,7 @@ function initMap() {
     position: myLatlng,
     map: map,
     icon: {
-      path:
-        "M12 2C7.28 2 3.11 6.18 3.11 11a8.53 8.53 0 0 0 5 7.75c.1.48.23.96.39 1.45l2.32 4.79c.2.41.66.41.86 0l2.32-4.79c.16-.49.29-.97.39-1.45A8.53 8.53 0 0 0 20.89 11 10 10 0 0 0 12 2zm0 14a3.2 3.2 0 0 1-3.2-3.2h6.4A3.2 3.2 0 0 1 12 16z",
+      path: "M12 2C7.28 2 3.11 6.18 3.11 11a8.53 8.53 0 0 0 5 7.75c.1.48.23.96.39 1.45l2.32 4.79c.2.41.66.41.86 0l2.32-4.79c.16-.49.29-.97.39-1.45A8.53 8.53 0 0 0 20.89 11 10 10 0 0 0 12 2zm0 14a3.2 3.2 0 0 1-3.2-3.2h6.4A3.2 3.2 0 0 1 12 16z",
       fillColor: "blue",
       fillOpacity: 1,
       strokeWeight: 0,
@@ -341,7 +357,7 @@ function initMap() {
       position: mapsMouseEvent.latLng,
     });
     infoWindow.setContent(
-      JSON.stringify(mapsMouseEvent.latLng.toJSON(), null, 2),
+      JSON.stringify(mapsMouseEvent.latLng.toJSON(), null, 2)
     );
     infoWindow.open(map);
   });
