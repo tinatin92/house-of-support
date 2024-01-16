@@ -238,25 +238,41 @@ $(document).ready(function () {
 
   $("#contactbutton").click(function (e) {
     e.preventDefault();
+    const contName = $("#contactname");
+    const contEmail = $("#contactmail");
+    const contMessage =  $("#contactmessage");
+    const warning = $(".warning");
 
-    if (
-      $("#contactname").val() !== "" &&
-      $("#contactmail").val() !== "" &&
-      $("#contactmessage").val() !== ""
-    ) {
-      $(".warning").removeClass("open");
-      $("#contactname").removeClass("red");
-      $("#contactmail").removeClass("red");
-      $("#contactmessage").removeClass("red");
+    checkContact(contName);
+    checkContact(contEmail);
+    checkContact(contMessage);
 
-      $("#contactform").submit();
-    } else {
-      $(".warning").addClass("open");
-      $("#contactname").addClass("red");
-      $("#contactmail").addClass("red");
-      $("#contactmessage").addClass("red");
+    function checkContact (input) {
+      if(contName.val() !== "" && contMessage.val() !== "" && contEmail.val() !== ""){
+        $("#contactform").submit();
+      }
+
+      if(input.val() === ""){
+        input.parent().addClass("parentClass");
+        input.addClass("red");
+        warning.addClass("open");
+       
+      }else{
+        input.removeClass("red");
+        warning.removeClass("open");
+        input.parent().removeClass("parentClass");
+        
+      };
+      
+
     }
+   
+   
+   
+
   });
+
+
 
   $(".burgerarrov").click(function () {
     $(this).parent().toggleClass("burgeropen"),
