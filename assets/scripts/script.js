@@ -40,29 +40,32 @@ $(document).ready(function () {
     slidesToScroll: 1,
     /*  autoplay: true, */
   });
-
-  $(".organization-image__slider").slick({
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    arrows: true,
-    appendArrows: $(".partners-slider__arrows"),
-    responsive: [
-      {
-        breakpoint: 993,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1,
+  const orgSlider = $(".organization-image__slider");
+  if (orgSlider.find('.organization-image-slide').length > 4) {
+    orgSlider.slick({
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      autoplay: true,
+      arrows: true,
+      appendArrows: $(".partners-slider__arrows"),
+      responsive: [
+        {
+          breakpoint: 993,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1,
+          },
         },
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+          },
         },
-      },
-    ],
-  });
+      ],
+    });
+  }
 
   $(".photo-gallery-slider").slick({
     slidesToShow: 3,
@@ -140,7 +143,7 @@ $(document).ready(function () {
           );
         }
       }
-      $(".circles").each(function () {
+      $(".achievements-circle").each(function () {
         var $this = $(this);
         var elementTopCircle = $this.offset().top;
 
@@ -287,7 +290,7 @@ $(document).ready(function () {
     $(this).toggleClass("active");
   });
 
-  const openModal = $(".team-slider__text");
+/*   const openModal = $(".team-slider__text");
   const closeModal = $(".modal-button");
   const modalBackground = $(".modal-background");
   const teamModal = $(".team-modal");
@@ -314,10 +317,12 @@ $(document).ready(function () {
 
   $(".burger-nav__button").click(function () {
     $(this).closest(".burger-open").toggleClass("open");
-  });
+  }); */
+
+  
 });
 
-/* const openButton = document.querySelector('[data-open-modal]');
+const openButton = document.querySelector('[data-open-modal]');
 const closeButton = document.querySelector('[data-close-modal]');
 const modal = document.querySelector('[data-modal]');
 
@@ -339,7 +344,11 @@ modal.addEventListener('click', function(e){
   ) {
     modal.close()
   }
-}) */
+}) ;
+
+
+
+
 function initMap() {
   const myLatlng = { lat: 41.72067159144, lng: 44.80369845458358 };
   const map = new google.maps.Map(document.getElementById("map"), {
